@@ -7,3 +7,4 @@
 <p>According to codeacademy.com: “Through cleverly constructed text inputs that modify the backend SQL query, threat actors can force the application to output private data or respond in ways that provide intel.” Even just reading the first few paragraphs of this webpage I’m amazed at the different methods, or rather, SQL injection techniques.</p>
 
 <p>After reading the description of union-based injections and trying to understand the examples of code that they used to explain the definition of UNION SELECT, I was still left a little unsure that I understood what union-based injections are. My thoughts were “wait, this sounds a lot like an inner join query.” So, I decided to do a quick google search to find further explanations to help me understand what this means. What I did find was a really helpful diagram that gave a very simple yet easier way for me to understand what the difference was between UNION and JOIN queries, shown below.</p>
+
