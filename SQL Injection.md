@@ -1,3 +1,5 @@
+<img src="https://miro.medium.com/v2/0*ErN7MyOU7wjQLSgM.jpg" alt="A description of the image" width="350">
+
 <h2>Thu 19/06/2025</h2>
 
 <p>Today on the way home from work I was listening to the 33rd episode of the podcast Darknet Diaries, by Jack Rysider and this episode was about this man named Tom and how he discovered SQL injection vulnerabilities on multiple websites he had visited.</p>
@@ -8,3 +10,10 @@
 
 <p>After reading the description of union-based injections and trying to understand the examples of code that they used to explain the definition of UNION SELECT, I was still left a little unsure that I understood what union-based injections are. My thoughts were “wait, this sounds a lot like an inner join query.” So, I decided to do a quick google search to find further explanations to help me understand what this means. What I did find was a really helpful diagram that gave a very simple yet easier way for me to understand what the difference was between UNION and JOIN queries, shown below.</p>
 
+<img src="https://www.scaler.com/topics/images/sql-union-vs-join-thumbnail.webp" alt="A description of the image" width="450">
+
+<p>Then after finding this diagram I began to read on from the ‘Scaler’ webpage article that this image originally came from. After reading through this information I have a far better understanding of the difference between UNION and JOIN. UNION is used when we want to display the results of two SELECT queries. This can be used to obtain usernames and passwords from two different tables. Consider an ecommerce website that stores passwords as simple strings that aren’t hashed, you could gather passwords and match them to usernames by using UNION to combine two SELECT statements. Note that with UNION the result does not contain any duplicated records. With JOIN you are extracting the data from more than one table and those records are combined into a new column, and that is the result. Put simply, UNION combines records of two SELECT statements’ results, and JOIN uses SELECT to combine as a result.</p>
+
+<p>Reading the codeacademy article about error-based injections. This still doesn’t really explain in a way that I can understand, so I did another google search to find a better understanding of error-based injections. Throwback to earlier in this blog post when I mentioned that Tom used a single quote in the website's login form and got that error regarding syntax. I found a website that I recognised, owasp.org, that continues to explain more about SQL injections with examples. Yes! I recognise this website as one of the resources from my time completing the Google certificate. So far this is one of the most creative ways to exploit databases online. From my understanding, if a threat actor is unable to get the information that they want using techniques like UNION they can use errors to display and extract the data that they want. The way in which this exploit is used is not in the log-in form but in the URL where adding a command after a standard query search will display the parameter added using two pipes. Here is an example of this in action:</p>
+
+<pre><code>https://www.example.com/product.php?id=10||UTL_INADDR.GET_HOST_NAME( (SELECT user FROM DUAL) )--</code></pre>
