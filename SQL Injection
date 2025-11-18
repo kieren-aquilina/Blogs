@@ -1,0 +1,9 @@
+<h2>Thu 19/06/2025</h2>
+
+<p>Today on the way home from work I was listening to the 33rd episode of the podcast Darknet Diaries, by Jack Rysider and this episode was about this man named Tom and how he discovered SQL injection vulnerabilities on multiple websites he had visited.</p>
+
+<p>Tom, having experience in the IT field, had attempted to log into a website using a single quote. The website would go blank and display the error code "You Have an Error in Your SQL Syntax."2 The episode continues down the path of discussing more about SQL injection and sanitising user input. This got me thinking and wanting to learn more. Currently, I'm in the process of completing Google's cybersecurity certificate on Coursera, and this topic of SQL injection has been covered but I wanted to do my own investigations to find out more about how SQL injections are done and what exactly sanitisation of user input is. So I did some digging.</p>
+
+<p>According to codeacademy.com: “Through cleverly constructed text inputs that modify the backend SQL query, threat actors can force the application to output private data or respond in ways that provide intel.” Even just reading the first few paragraphs of this webpage I’m amazed at the different methods, or rather, SQL injection techniques.</p>
+
+<p>After reading the description of union-based injections and trying to understand the examples of code that they used to explain the definition of UNION SELECT, I was still left a little unsure that I understood what union-based injections are. My thoughts were “wait, this sounds a lot like an inner join query.” So, I decided to do a quick google search to find further explanations to help me understand what this means. What I did find was a really helpful diagram that gave a very simple yet easier way for me to understand what the difference was between UNION and JOIN queries, shown below.</p>
